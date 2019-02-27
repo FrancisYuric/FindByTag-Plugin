@@ -1,0 +1,42 @@
+<idea-plugin>
+    <id>com.ciruy.francis.plugin.findViewByTag</id>
+    <name>FindByTag Plugin</name>
+    <version>2.0</version>
+    <vendor email="398712739@qq.com"></vendor>
+
+    <description><![CDATA[
+      模块开发快速生成FindByTag信息<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      初步搭建生成findViewTag<br>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="FindByTagAction" class="com.ciruy.francis.FindByTagAction" text="Generate FindByTag"
+                icon="/quick_find_views.png"
+                description="生成FindByTag">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+        <!--<action id="GenerateXmlTagAction" class="com.jarvis.findviews.GenerateXmlTagAction" text="AutoGenerateXmlTag"-->
+        <!--description="在xml中自动生成tag操作">-->
+        <!--<add-to-group group-id="GenerateGroup" anchor="last"/>-->
+        <!--</action>-->
+    </actions>
+
+</idea-plugin>
